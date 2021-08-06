@@ -30,8 +30,6 @@ body {
   color: var(--primari-text-color);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
-  /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2); */
 }
 
 ul {
@@ -282,12 +280,16 @@ img {
 }
 
 .button-hidden {
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
   border: none;
   width: 270px;
   height: 120px;
   margin-bottom: 30px;
-  color: var(--button-background-color);
+  border-radius: 4px;
+  background-color: var(--button-background-color);
 }
 
 .button-icon {
@@ -297,13 +299,12 @@ img {
 
 .button-filter {
   margin-bottom: 50px;
-
   display: flex;
   justify-content: center;
 }
 
-.filter-item:hover,
-.filter-item:focus {
+.filter-item:focus,
+.filter-item:hover {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -341,14 +342,15 @@ img {
   margin-bottom: 0px;
 }
 
-.projects-item:focus,
-.projects-item:hover {
+.projects-link:focus,
+.projects-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projects-link {
   display: block;
+  color: var(--primari-text-color);
 }
 
 .projects-title {
@@ -468,8 +470,8 @@ img {
   fill: var(--fill-icon-color);
 }
 
-.icon-link:hover,
-.icon-link:focus {
+a.link:hover .icon-link,
+a.link:focus .icon-link {
   fill: var(--primari-white-color);
 }
 
@@ -515,8 +517,6 @@ img {
   margin: 0px;
 }
 .logo-card {
-  display: flex;
-  align-items: center;
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
@@ -528,11 +528,18 @@ img {
   border: 1px solid var(--accent-color);
 }
 
-.icon-logo:focus,
-.icon-logo:hover {
+.partners {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+a.partners:focus .icon-logo,
+a.partners:hover .icon-logo {
   fill: var(--accent-color);
 }
-.logo-card > .logo {
+/* .logo-card > .logo {
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -540,8 +547,13 @@ img {
   align-items: center;
   width: 106px;
   height: 92px;
-}
+} */
 .icon-logo {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
   fill: var(--fill-icon-color);
 }
 /*  section footer */
